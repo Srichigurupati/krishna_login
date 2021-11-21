@@ -1,0 +1,62 @@
+
+<!DOCTYPE html> 
+<html> 
+    
+<head> 
+    <title>Inline JavaScript</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" 
+          href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head> 
+    
+<body>
+
+    <div class="container"> 
+        <h1 style="text-align:center;color:orange;"> 
+          Login Page 
+      </h1> 
+        <form> 
+            <div class="form-group"> 
+                <label for="">Username:</label> 
+                <input id="name"
+                       class="form-control" 
+                       type="text" 
+                       placeholder="Username please"> 
+
+	    <div class="form-group"> 
+                <label for="">Password:</label> 
+                <input id="pwd"
+                       class="form-control" 
+                       type="text" 
+                       placeholder="Password please"> 
+            </div> 
+            <div class="form-group"> 
+                <button id="btn-alert"
+                        class="btn btn-success btn-lg float-right" 
+                        type="submit"> 
+                     Submit  
+                </button> 
+            </div> 
+	
+        </form> 
+    </div> 
+    <script>
+        var username = document.getElementById("name");
+        var password = document.getElementById("pwd");
+        document.getElementById("btn-alert").addEventListener("click", function(){
+
+	 var uname=username.value.trim();
+	 var pwd=password.value.trim();
+            if(uname=="admin"&& pwd=="letmein" )
+		alert("Welcome, " + uname+ "!\nto the world of krishna");
+
+            else
+                alert("hello " +uname+ " Incorrect credentials!!");
+        });
+    </script>
+</body> 
+   
+</html> 
